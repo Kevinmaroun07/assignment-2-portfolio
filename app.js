@@ -17,7 +17,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/bootstrap/dist', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist')));
+app.use('/@fortawesome/fontawesome-free', express.static(path.join(__dirname, 'node_modules', '@fortawesome', 'fontawesome-free')));
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
