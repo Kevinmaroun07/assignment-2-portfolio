@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<header>
+  <%- include('partials/main_nav') %>
+</header>
+
+<main class="container flex-grow-1 py-4">
+  <h1 class="mb-3"><%= title %></h1>
+  <%- include(pageView) %>
+</main>
+
+<%- include('partials/footer') %>
